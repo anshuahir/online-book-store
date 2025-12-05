@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Catalogue - TC</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="../js/store.js"></script>
+</head>
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="width:225px;">Cover</th>
+        <th style="width:220px;">Book</th>
+        <th style="width:120px;">Price</th>
+        <th>Add to cart</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img class="book-img" src="https://m.media-amazon.com/images/I/61caqpsOBML._AC_UF1000,1000_QL80_.jpg" alt="Concrete Technology Cover" /></td>
+        <td><strong>TEXTILE CHEMISTRY</strong><br />Author: Thomas Bechtold & Tung Pumm<br />Publisher: De Gruyter</td>
+        <td>$38.0</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'TC',name:'TEXTILE CHEMISTRY',price:38})">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td><img class="book-img" src="https://media.springernature.com/full/springer-static/cover-hires/book/978-94-011-0595-8" alt="Chemistry of the Textiles Industry Cover" /></td>
+        <td><strong>Chemistry of the Textiles Industry</strong><br />Author: C.M. Carr<br />Publisher: Springer Dordrecht</td>
+        <td>$42.0</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'TC',name:'Chemistry of the Textiles Industry',price:42})">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td><img class="book-img" src="https://img.perlego.com/book-covers/786896/9781782626367.jpg" alt="The Chemistry of Textile Fibres Cover" /></td>
+        <td><strong>The Chemistry of Textile Fibres</strong><br />Author: Robert R Mather & Roger H Wardman<br />Publisher: 
+Royal Society of Chemistry</td>
+        <td>$40.0</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'TC',name:'The Chemistry of Textile Fibres',price:40})">Add to cart</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

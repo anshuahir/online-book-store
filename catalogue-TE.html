@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Catalogue - TE</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="../js/store.js"></script>
+</head>
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="width:225px;">Cover</th>
+        <th style="width:220px;">Book</th>
+        <th style="width:120px;">Price</th>
+        <th>Add to cart</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <img class="book-img" src="https://m.media-amazon.com/images/I/61TVyiHBRjL._AC_UF1000,1000_QL80_.jpg" alt="Textile Engineering: An Introduction Cover" /></td>
+        <td><strong>Textile Engineering: An Introduction</strong><br />Author: Yasir Nawab & Khubab Shekar<br />Publisher: De Gruyter Oldenbourg</td>
+        <td>$48.0</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'TE',name:'Textile Engineering: An Introduction',price:48})">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td><img class="book-img" src="https://m.media-amazon.com/images/I/61-+b2tUu5L._AC_UF1000,1000_QL80_.jpg" alt="Advanced Textile Engineering Materials Cover" /></td>
+        <td><strong>Advanced Textile Engineering Materials</strong><br />Author: Shahid Ul Isalm & B.S. Butola<br />Publisher: Wiley-Scrivener</td>
+        <td>$52.0</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'TE',name:'Advanced Textile Engineering Materials',price:52})">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td><img class="book-img" src="https://m.media-amazon.com/images/I/61gT3x9A-9L._AC_UF1000,1000_QL80_.jpg" alt="Handbook of Textile Engineering Cover" /></td>
+        <td><strong>Handbook of Textile Engineering </strong><br />Author: Dick Baia<br />Publisher: NY Research Press</td>
+        <td>$41.0</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'TE',name:'Handbook of Textile Engineering',price:41})">Add to cart</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script>
+    function validateForm(e) {
+      const name = document.getElementById('name').value.trim();
+      const password = document.getElementById('password').value;
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+
+      // Name: alphabets only and length >= 6
+      if (!/^[A-Za-z ]{6,}$/.test(name)) {
+        alert('Name should contain only alphabets and be at least 6 characters.');
+        e.preventDefault();
+        return false;
+      }
+      // Password: length >= 6
+      if (password.length < 6) {
+        alert('Password should not be less than 6 characters.');
+        e.preventDefault();
+        return false;
+      }
+      // Email: standard pattern
+      if (!/^([\w.-])+@([\w-])+\.[A-Za-z]{2,}$/.test(email)) {
+        alert('Please enter a valid e-mail id.');
+        e.preventDefault();
+        return false;
+      }
+      // Phone: 10 digits only
+      if (!/^\d{10}$/.test(phone)) {
+        alert('Phone number should contain 10 digits only.');
+        e.preventDefault();
+        return false;
+      }
+      alert('Registration valid! (Demo only)');
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="validateForm(event)">
+    <table class="table">
+      <thead>
+        <tr><th colspan="2">Registration Form</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td><input id="name" type="text" required /></td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input id="password" type="password" required /></td>
+        </tr>
+        <tr>
+          <td>E-mail id</td>
+          <td><input id="email" type="email" required /></td>
+        </tr>
+        <tr>
+          <td>Phone number</td>
+          <td><input id="phone" type="text" required /></td>
+        </tr>
+        <tr>
+          <td>Sex</td>
+          <td>
+            <label><input type="radio" name="sex" value="male" required /> Male</label>
+            <label><input type="radio" name="sex" value="female" /> Female</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Date of birth</td>
+          <td>
+            <select><option>1</option><option>2</option><option>3</option></select>
+            <select><option>Jan</option><option>Feb</option><option>Mar</option></select>
+            <select><option>1998</option><option>1999</option><option>2000</option></select>
+          </td>
+        </tr>
+        <tr>
+          <td>Languages known</td>
+          <td>
+            <label><input type="checkbox" /> English</label>
+            <label><input type="checkbox" /> Telugu</label>
+            <label><input type="checkbox" /> Hindi</label>
+            <label><input type="checkbox" /> Tamil</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td><textarea rows="3"></textarea></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button class="btn" type="submit">Register</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>

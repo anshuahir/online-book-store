@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Catalogue - TT</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="../js/store.js"></script>
+</head>
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="width:225px;">Cover</th>  
+        <th style="width:220px;">Book</th>
+        <th style="width:120px;">Price</th>
+        <th>Add to cart</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img class="book-img" src="https://m.media-amazon.com/images/I/71bHCWzrWeL._AC_UF1000,1000_QL80_.jpg" alt="Technical Textiles Cover" /></td>
+        <td><strong>Technical Textiles</strong><br />Author: D Gopalakrishnan<br />Publisher:  Daya Pub. House </td>
+        <td>$45.0</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'TT',name:'Technical Textiles',price:45})">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td><img class="book-img" src="https://m.media-amazon.com/images/I/81dsEWiPSsL._AC_UF1000,1000_QL80_.jpg" alt="Textile Technology: An Introduction Cover" /></td>
+        <td><strong>Textile Technology: An Introduction</strong><br />Author: Thomas Gries & Dieter Veit<br />Publisher: Hanser Publications</td>
+        <td>$55.0</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'TT',name:'Textile Technology: An Introduction',price:55})">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td><img class="book-img" src="https://m.media-amazon.com/images/I/51-9DDQUAkL._AC_UF1000,1000_QL80_.jpg" alt="Functional and Technical Textiles Cover" /></td>
+        <td><strong>Functional and Technical Textiles</strong><br />Author: Shubhankar Maithi & Kunal Singha & Pintu Pandit<br />Publisher: Woodhead Pub Ltd</td>
+        <td>$60.0</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'TT',name:'Functional and Technical Textiles',price:60})">Add to cart</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

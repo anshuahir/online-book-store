@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Catalogue - CSE</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="../js/store.js"></script>
+</head>
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="width:225px;">Cover</th>
+        <th style="width:220px;">Book</th>
+        <th style="width:120px;">Price</th>
+        <th>Add to cart</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img class="book-img" src="https://m.media-amazon.com/images/I/516RaKSnC6L._AC_UF1000,1000_QL80_.jpg" alt="XML Bible Cover" /></td>
+        <td>
+          <strong>XML Bible</strong><br />Author: Winston<br />Publisher: Wiley
+        </td>
+        <td>$40.5</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'CSE',name:'XML bible',price:40.5})">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td><img class="book-img" src="https://m.media-amazon.com/images/I/61-6TTTBZeL.jpg" alt="AI Cover" /></td>
+        <td>
+          <strong>AI</strong><br />Author: S. Russel<br />Publisher: Princeton Hall
+        </td>
+        <td>$63</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'CSE',name:'AI',price:63})">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td><img class="book-img" src="https://m.media-amazon.com/images/I/51h30OBcfaL._AC_UF1000,1000_QL80_.jpg" alt="Java 2 Cover" /></td>
+        <td>
+          <strong>Java 2</strong><br />Author: Watson<br />Publisher: BPB Publications
+        </td>
+        <td>$35.5</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'CSE',name:'Java 2',price:35.5})">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td><img class="book-img" src="https://m.media-amazon.com/images/I/51JKFOPk-NL._UF1000,1000_QL80_.jpg" alt="HTML in 24 Hours Cover" /></td>
+        <td>
+          <strong>HTML in 24 Hours</strong><br />Author: Sam Peter<br />Publisher: Sams
+        </td>
+        <td>$50</td>
+        <td><button class="btn" onclick="CartStore.addToCart({dept:'CSE',name:'HTML in 24 hours',price:50})">Add to cart</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cart</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="../js/store.js"></script>
+</head>
+<body>
+  <table class="table" id="cartTable">
+    <thead>
+      <tr>
+        <th style="width:140px;">Dept</th>
+        <th>Book name</th>
+        <th style="width:100px;">Price</th>
+        <th style="width:100px;">Quantity</th>
+        <th style="width:120px;">Amount</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4" style="text-align:right;font-weight:bold;">Total amount</td>
+        <td id="totalCell">$0.0</td>
+      </tr>
+    </tfoot>
+  </table>
+  <div style="margin-top:10px;">
+    <button class="btn" onclick="CartStore.clearCart(); renderCart();">Clear cart</button>
+  </div>
+
+  <script>
+    function renderCart(){
+      const tbody = document.querySelector('#cartTable tbody');
+      tbody.innerHTML = '';
+      const cart = CartStore.getCart();
+      let total = 0;
+      for(const item of cart){
+        const amount = item.price * item.qty;
+        total += amount;
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${item.dept}</td>
+          <td>${item.name}</td>
+          <td>${CartStore.formatCurrency(item.price)}</td>
+          <td>${item.qty}</td>
+          <td>${CartStore.formatCurrency(amount)}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+      document.getElementById('totalCell').textContent = CartStore.formatCurrency(total);
+    }
+    renderCart();
+  </script>
+</body>
+</html>

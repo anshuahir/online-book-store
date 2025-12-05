@@ -1,0 +1,133 @@
+/* Global styles */
+:root {
+  --frame-bg: #fff; /* soft orange */
+  --border: #444;
+  --text: #222;
+  --link: #0b66c3;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: var(--text);
+  /* Background image with repeat per requirement */
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-repeat: repeat;
+  text-align: center;
+}
+
+/* Top frame */
+.top-frame {
+  border-bottom: 2px solid var(--border);
+  background: var(--frame-bg);
+}
+.brand-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.logo {
+  font-weight: bold;
+  text-align: left;
+}
+.site-name {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 2.5rem;
+}
+.main-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  border-top: 1px solid #999;
+  background-color: #ffe0b2;
+}
+.main-nav a {
+  padding: 8px 0;
+  display: block;
+  border-right: 1px solid #bbb;
+}
+.main-nav a:last-child { border-right: none; }
+
+/* Frames layout */
+.frames {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  height: calc(100vh - 148px); /* adjust for header+footer */
+}
+.left-frame {
+  border-right: 2px solid var(--border);
+}
+.dept-title {
+  background: var(--frame-bg);
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.dept-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dept-list li a {
+  display: block;
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.right-frame {
+  padding: 0;
+}
+.content-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #fff;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 2px solid var(--border);
+  background: #222;
+  color: #f8c3b1;
+  font-weight: bold;
+}
+
+/* Link states per requirement */
+a:link { color: var(--link); text-decoration: none; }
+a:visited { color: #6a1b9a; }
+a:hover { color: #0d47a1; text-decoration: underline; }
+a:active { color: #c62828; }
+
+/* Table helpers for pages */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  border: 1px solid #333;
+  padding: 8px;
+}
+.table thead th {
+  background: var(--frame-bg);
+}
+
+.btn {
+  background: #ffd54f;
+  border: 1px solid #aa8b00;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.btn:hover { background: #ffca28; }
+
+.book-img {
+  width: 150px;
+  height: auto;
+}
